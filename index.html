@@ -51,7 +51,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     color: #003478;
-
+    line-height: 1.6;
   }
 
   .footer {
@@ -104,6 +104,46 @@
     <button class="form-button">회원가입 하러가기</button>
 </a>
 <!-- 구글 폼 버튼 링크 끝 -->
+<!-- 현재 받을수 있는 혜택 버튼 시작 -->
+<button class="form-button" onclick="openModal()">회원혜택(추가중)</button>
+
+<!-- 혜택 팝업 시작 -->
+<div id="benefitsModal" style="display: none; position: fixed; z-index: 1; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);">
+  <div style="background-color: #fefefe; margin: 15% auto; padding: 20px; border: 1px solid #888; width: 80%;">
+    <span style="color: #aaa; float: right; font-size: 28px; font-weight: bold;" onclick="closeModal()">&times;</span>
+    <p style="line-height: 1.6; font-size: 16px; font-family: Arial, sans-serif;">
+      (현재 협회와 제휴한 서비스를 공유드립니다. 향후 추가 총회회원 혜택에 대해 지속 안내드리겠습니다.)<br>
+      협회 회비(1만원/월)은  2023.11.30까지 면제 예정입니다.<br>
+      항공권/중국비자/공증인증: 협회사무실에서 바로 진행할수 있습니다. 마진없이 진행합니다.<br>
+      병원: 암이나 질병으로 인해 대학병원에 예약을 해야 할때 시간 단축 및 수술비 혜택을 드릴수 있습니다.<br>
+      치과: 제휴 치과에서 회원들께 비용측면에서 절감을 해줍니다.<br>
+      장례: 회원의 가족에 한하여 제휴사에서 추가 서비스를 제공해줍니다. (추후 추모협회기 배정 예정)<br>
+      현장사고/출입국/법률: 회원에 한하여 빠르고 정확하게 일을 처리해 드립니다. (무료법률상담)<br>
+      * 그외에 총회와 제휴를 희망하시는 분들은 총회장 또는 사무총장께 연락주시면 찾아뵙겠습니다.<br>
+      총회 회원분들께 더 많은 혜택과 한국에서의 삶 제고에 힘쓰겠습니다.<br>
+    </p>
+    <hr>
+    <p style="font-weight: bold; text-align: center;">
+      총회장 김호림: 010-4947-1888<br>
+      사무총장 신홍범: 010-6405-6384<br>
+      사무국 혜택문의 및 회원등록확인: 010-2130-3986
+    </p>
+  </div>
+</div>
+<!-- 혜택 팝업 끝 -->
+
+<script>
+  function openModal() {
+    document.getElementById("benefitsModal").style.display = "block";
+  }
+
+  function closeModal() {
+    document.getElementById("benefitsModal").style.display = "none";
+  }
+</script>
+<!-- 현재 받을수 있는 혜택 버튼 끝 -->
+
+
 
 <!-- 부가 설명 시작 -->
 <p>위 링크를 통해 회원가입이 어려우신분들은 아래 내용을 작성하여 사무국에 연락주시면 회원등록을 해드립니다.</p>
@@ -135,3 +175,5 @@
 
 </body>
 </html>
+
+
